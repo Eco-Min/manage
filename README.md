@@ -7,6 +7,6 @@ Spring web, Lombok, JPA, Thymeleaf, MysqlDriver
 ## v1.0.0
 - 팀과 선수 를 관리하는 DB 를 JPA 로 연결 하기
 
-## v2.0.0
+## v1.1.0
 - 팀과 선수를 fetchJoin 하여 Dto 로 해서 mvc 에 반환
 
