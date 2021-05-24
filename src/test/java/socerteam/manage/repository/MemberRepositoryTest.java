@@ -18,7 +18,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 @Transactional
-@Rollback(value = false)
+@Rollback
 class MemberRepositoryTest {
 
     @Autowired
@@ -44,12 +44,11 @@ class MemberRepositoryTest {
         for (Member member : members) {
             memberRepository.save(member);
         }
-        try {
-            Thread.sleep(10000);
-            member5.preUpdate();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
 
+        List<Member> all = memberRepository.findAll();
+        for (Member member : all) {
+            System.out.println("member.getId() = " + member.getId());
+            System.out.println("member.getName() = " + member.getName());
+        }
     }
 }
