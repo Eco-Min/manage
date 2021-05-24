@@ -3,13 +3,14 @@ package socerteam.manage.domain;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity
 @NoArgsConstructor
-@Getter()
+@Getter
 public class Member extends BaseEntity{
 
     @Id
@@ -18,6 +19,7 @@ public class Member extends BaseEntity{
     private Long id;
 
     @Column(name = "member_name")
+
     private String name;
 
     @Column(name = "member_age")

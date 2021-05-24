@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>soccerMember</title>
+</head>
+<body>
+<div>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>이름</th>
+            <th>나이</th>
+            <th>팀 이름</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="member : ${data}">
+            <td th:text="${member.getMemberName()}">회원 이름</td>
+            <td th:text="${member.getAge()}">회원 나이</td>
+            <td th:text="${member.getTeamName()}">소속 팀</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
